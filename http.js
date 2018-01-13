@@ -19,7 +19,7 @@ httpExt.prototype.getInfo = function () {
                 opcode: 'httpExt-set',
                 blockType: Scratch.BlockType.REPORTER,
                 blockAllThreads: false,
-                text: '[requests] [VALUE]',
+                text: 'GET [VALUE]',
                 func: 'request',
                 arguments: {
                     VALUE: {
@@ -29,13 +29,6 @@ httpExt.prototype.getInfo = function () {
                 }
             }
         ],
-        menus: {
-            // Required: an identifier for this menu, unique within this extension.
-            requests: [
-                'GET',
-                'POST'
-            ]
-        }
     };
 };
 
@@ -48,7 +41,7 @@ httpExt.prototype.getInfo = function () {
  */
 httpExt.prototype.set = function (args) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( args.requests, args.VALUE, false );
+    xmlHttp.open( 'GET', args.VALUE, false );
     xmlHttp.send( null );
     return xmlHttp.responseText;
 };
