@@ -57,10 +57,12 @@ lsExt.prototype.getInfo = function () {
  * @returns {string} a string which includes the block argument value.
  */
 lsExt.prototype.set = function (args) {
+    console.log(args.NAME, args.VALUE);
     localStorage.setItem(args.NAME, args.VALUE);
 };
 
 lsExt.prototype.get = function (args) {
+    console.log(args.NAME);
     return localStorage.getItem(args.NAME);
 };
 
