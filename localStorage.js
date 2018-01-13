@@ -16,7 +16,7 @@ lsExt.prototype.getInfo = function () {
 
         blocks: [
             {
-                opcode: 'lsExt-get',
+                opcode: 'lsExt-set',
                 blockType: Scratch.BlockType.COMMAND,
                 blockAllThreads: false,
                 text: 'set [NAME] to [VALUE]',
