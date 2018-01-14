@@ -17,7 +17,7 @@ basicJS.prototype.getInfo = function () {
         blocks: [
             {
                 opcode: 'basicJS-alert',
-                blockType: Scratch.BlockType.STRING,
+                blockType: Scratch.BlockType.COMMAND,
                 blockAllThreads: true,
                 text: 'Alert [ALERT]',
                 func: 'alert',
