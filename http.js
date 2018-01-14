@@ -18,7 +18,7 @@ httpExt.prototype.getInfo = function () {
             {
                 opcode: 'httpExt-set',
                 blockType: Scratch.BlockType.REPORTER,
-                blockAllThreads: false,
+                blockAllThreads: true,
                 text: 'GET [VALUE]',
                 func: 'request',
                 arguments: {
